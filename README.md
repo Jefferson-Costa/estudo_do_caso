@@ -77,7 +77,7 @@ Informação_financeiro(idfinanceiro, despesas, lucro, disponibilidade cofre, va
 
 ## Modelo Físico 
 
-````
+```
  /*Para o projeto de bando de dados da casa oliveira, será criado uma estrutura física com os comandos SQL (Structure Query Language). Iremos começar
  com o comando de criação de banco de dados. 
  Este comando pertence a categoria de comandos DFL (Data Definition Language)
@@ -134,30 +134,34 @@ Informação_financeiro(idfinanceiro, despesas, lucro, disponibilidade cofre, va
  Para os campos nome, marca e categoria, será definido o tipo de dado VARCHAR, pois deste tipo é capaz de receber caracteres de texto. Precisaremos apenas
  definir o tamanho de cada campo. Nome pode ficar com o tamanho 50, marcar pode ficar com o tamanho 30 e categoria 20.
  */
- ```
-
- ```
- 
- 
- CREATE TABLE produto (
- iproduto int auto_increment primary key,
- descricao text,
- fornecedor varchar (50),
- lote varchar (20),
- preco decimal (8,2),
- nome varchar (50),
- marca varchar (20),
- categoria varchar (20)
- );
- 
- CREATE TABLE estoque (
- idestoque int auto_increment primary key,
- idproduto int,
- quantidade_maxima int,
- quantidade_minima int,
- quantidade_atual int,
- ultima_movimentacao date,
- quantidade_LOTE int
- );  
- 
 ```
+
+
+ 
+
+  CREATE TABLE produto (
+  iproduto int auto_increment primary key,
+  descricao text,
+  fornecedor varchar (50),
+  lote varchar (20),
+  preco decimal (8,2),
+  nome varchar (50),
+  marca varchar (20),
+  categoria varchar (20)
+  );
+ 
+  CREATE TABLE estoque (
+  idestoque int auto_increment primary key,
+  idproduto int,
+  quantidade_maxima int,
+  quantidade_minima int,
+  quantidade_atual int,
+  ultima_movimentacao date,
+  quantidade_LOTE int
+  );  
+
+```
+
+
+### Modelo Físico -MER (Modelo de Entidade Relacional)
+!["iagrama do Modelo Entidade Realiconal"](./modelo_fisico_MER.png)
